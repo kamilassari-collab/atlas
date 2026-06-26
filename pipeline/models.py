@@ -24,22 +24,6 @@ class ApplicationStatus(str, Enum):
     WITHDRAWN = "withdrawn"
 
 
-# Kanban-facing labels (the dashboard reads these)
-STATUS_LABELS: dict[str, str] = {
-    "queued": "🔵 À postuler",
-    "generation_requested": "⏳ Génération…",
-    "cv_tailored": "🔵 À postuler",
-    "cover_letter_done": "🔵 À postuler",
-    "applied": "📤 Postulé",
-    "interview_1": "📞 Entretien 1",
-    "interview_2": "🔄 Entretien 2+",
-    "offer": "✅ Offre reçue",
-    "rejected": "❌ Refusé",
-    "paused": "⏸ En pause",
-    "withdrawn": "🚫 Retiré",
-}
-
-
 def _utcnow_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 

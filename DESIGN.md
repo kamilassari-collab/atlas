@@ -29,16 +29,16 @@ amber `--mid #9A6F2E` (65–79), clay `--lo #9C5544` (<65). No accent color beyo
 If the user later wants one accent, add it deliberately — never unprompted.
 
 ## No emojis
-Zero. Use hairline SVG marks (the radar glyph, the Postuler arrow, nav icons).
+Zero. Use hairline SVG marks (the radar glyph, the Apply arrow, nav icons).
 
 ## Layout
 - **Sidebar:** near-black, "Atlas" wordmark + geometric mark + "Job command center".
-- **Hero:** "Tes offres, avant tout le monde." + freshness subline.
-- **Funnel band (NOT vanity):** fraîches · à postuler · postulé · en entretien. Never "80+ match".
+- **Hero:** "Your roles, before everyone else." + freshness subline.
+- **Funnel band (NOT vanity):** new · to apply · applied · interviewing. Never "80+ match".
 - **Feed = aligned ledger:** hairline-separated rows; columns line up across every card —
-  `title · score · statut · CV · Lettre · Postuler`. Score = number + tier dot.
+  `title · score · status · CV · Letter · Apply`. Score = number + tier dot.
 - **Buttons:** one dark (ink) primary per card; ghosts for the rest. Hairline borders.
-- **Kanban:** calm columns, small-caps headers + tier dots, no emoji doc links (CV / LM text).
+- **Kanban:** calm columns, small-caps headers + tier dots, no emoji doc links (CV / Letter text).
 
 ## Motion
 Staggered fadeUp on load, subtle pulse on the freshness dot, spinner on generation.
