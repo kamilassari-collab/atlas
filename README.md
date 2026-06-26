@@ -74,7 +74,8 @@ Local-first isn't a limitation. It's the feature.
 
 <div align="center">
 
-<!-- Add the screenshot: docs/dashboard.png -->
+<img src="docs/dashboard.png" alt="Atlas dashboard — scored roles, a live funnel, CV and cover letter ready" width="880">
+
 *A premium, quiet command center.*
 
 </div>
