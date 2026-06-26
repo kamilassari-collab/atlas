@@ -1,0 +1,11 @@
+# All user data stays local and private. Never committed.
+data/
+config.yaml
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.gstack/
+# Local Claude Code tooling (not part of Atlas). The /atlas command does ship.
+.claude/skills/
+.claude/launch.json

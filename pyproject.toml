@@ -1,0 +1,20 @@
+[project]
+name = "atlas"
+version = "0.1.0"
+description = "Free AI job machine — fetch fresh jobs, score them for you, tailor your CV, track applications. Runs locally in your coding agent. Zero cost."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "python-jobspy>=1.1.80",   # multi-site scraper: LinkedIn + Indeed + Google + Glassdoor + ZipRecruiter
+    "reportlab>=4.0",          # local PDF rendering (cover letters, CV fallback)
+    "python-docx>=1.1",        # in-place CV bullet swap (preserves the user's design)
+    "docx2pdf>=0.1.8",         # DOCX→PDF via MS Word (macOS/Windows); LibreOffice used first when present
+    "pyyaml>=6.0",             # config.yaml
+]
+
+# uv pins the interpreter so a non-technical user never touches Python:
+#   uv python install 3.12 && uv sync
+# provisions Python 3.12 + every dependency in one reproducible step,
+# independent of the system Python (macOS ships 3.9, which JobSpy rejects).
+[tool.uv]
+python-preference = "managed"

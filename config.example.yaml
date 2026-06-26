@@ -1,0 +1,58 @@
+# Atlas config — /setup writes your real config.yaml from this template.
+# Everything here is per-user; nothing is shared, nothing leaves your machine.
+
+profile:
+  full_name: ""
+  email: ""
+
+# 1. What you're looking for — free text, any profession.
+#    /setup asks Claude to expand each into ~8 adjacent search keywords.
+target_roles:
+  - "founders associate"
+  - "operations associate"
+
+# 2. Where. Free text, city + country (as job boards expect it). "Remote" works too.
+locations:
+  - "Paris, France"
+  - "London, United Kingdom"
+
+# 3. Seniority — filters off-target levels during scoring.
+#    one of: internship | junior | mid | senior
+seniority: "junior"
+
+# 4. Contract types you'll accept.
+#    full-time | alternance | internship | werkstudent | freelance | part-time | contract
+contract_types:
+  - "full-time"
+  - "internship"
+
+# 5. Languages YOU speak — jobs requiring a language not in this list are rejected.
+languages:
+  - "english"
+  - "french"
+
+# 6. Minimum relevance score (0-100) to keep a job in your feed.
+min_score: 65
+
+# 7. CV — set by /setup after you drop your file.
+#    format: docx  -> full automatic tailoring (your design preserved)
+#    format: pdf | text -> suggestions list (we never rebuild your CV)
+cv:
+  format: "docx"
+  docx_path: ""          # e.g. "data/my_cv.docx"
+  language: "english"
+
+# 8. Cover-letter model (optional, recommended) — your best past letter, or one
+#    whose style you like. Atlas writes every letter in that tone/structure so they
+#    sound like you, not like AI. /setup saves it to data/letter_model.txt.
+cover_letter:
+  model: ""              # e.g. "data/letter_model.txt" — leave blank for a clean default
+  tone: ""              # formal | warm | confident | concise | enthusiastic | (free text)
+
+# 9. Remote — do you want remote/worldwide jobs in your feed?
+#    false = only jobs located in your chosen cities
+include_remote: false
+
+# Fetch behaviour
+fetch:
+  hours_old: 24          # only jobs posted in the last N hours (freshness)
