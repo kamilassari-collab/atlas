@@ -2,7 +2,7 @@
 
 # Atlas
 
-### Tes offres, avant tout le monde.
+### Your roles, before everyone else.
 
 **A free job-hunt command center that runs on your own machine.**
 
@@ -79,7 +79,7 @@ Local-first isn't a limitation. It's the feature.
 
 </div>
 
-A ledger of scored roles, a real funnel (à postuler → postulé → en entretien), and a
+A ledger of scored roles, a real funnel (to apply → applied → interviewing), and a
 drag-and-drop kanban. Your top matches arrive with CV + cover letter already prepared.
 Click to download, click to apply.
 
