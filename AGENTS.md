@@ -124,6 +124,21 @@ When you generate for a job (auto-prep or on request):
 - **CV — re-angle, never rewrite. Zero invention.** Surface the aspect of the user's
   *existing* bullets that the offer wants, with verbs that resonate. Never add a fact,
   number, company, fund, name, or skill that is not already literally on the CV.
+
+  **Bullet quality — tailoring sharpens each line, it never pads:**
+  - **Every bullet must be distinct. Never output two bullets that make the same point.**
+    If the source CV repeats itself (e.g. two "weekly reporting / KPIs" lines), MERGE them
+    into one stronger bullet — don't carry both. Check each role for near-duplicates before
+    you render.
+  - **Lead with a strong action verb** (Drove, Built, Secured, Closed, Ran, Launched…), never
+    "Responsible for" or "Helped with".
+  - **Quantify.** Keep every real number the source gives you (€, %, headcount, time) and pull
+    it to the front of the bullet. Numbers are what make it land.
+  - **Be honest when a role is thin.** If a role has no metrics or only vague bullets and you
+    have nothing real to strengthen it with, TELL the user plainly — e.g. *"the Matera role has
+    no numbers yet and reads generic; add a metric or two and it'll be much stronger"* — instead
+    of padding with filler or repeating a point. Fewer strong bullets beat more weak ones, and a
+    flagged gap beats a fake one. Never invent a number to fill the hole.
   - `cv.format == docx`: bullets JSON keyed by the role headings exactly as written →
     `uv run python -m scripts.render_cv <job_id> '{"Role heading": ["bullet 1", ...]}'`.
     Swaps in place AND converts to PDF (design preserved). Conversion is async: the
