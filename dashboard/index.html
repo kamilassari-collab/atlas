@@ -358,6 +358,7 @@ const T = {
     contracts: { "full-time": "Full-time", "part-time": "Part-time", "internship": "Internship", "alternance": "Apprenticeship", "werkstudent": "Werkstudent", "contract": "Contract", "freelance": "Freelance" },
     cols: { todo: "To apply", applied: "Applied", interview_1: "Interview 1", interview_2: "Interview 2+", offer: "Offer", rejected: "Rejected" },
     statuses: [["queued", "To apply"], ["applied", "Applied"], ["interview_1", "Interview 1"], ["interview_2", "Interview 2+"], ["offer", "Offer"], ["rejected", "Rejected"], ["paused", "Paused"]],
+    aria: { city: "Filter by city", type: "Filter by contract type", status: "Status", close: "Close" },
   },
   fr: {
     title: "Atlas, tes offres avant tout le monde",
@@ -384,6 +385,7 @@ const T = {
     contracts: { "full-time": "CDI", "part-time": "Temps partiel", "internship": "Stage", "alternance": "Alternance", "werkstudent": "Werkstudent", "contract": "CDD", "freelance": "Freelance" },
     cols: { todo: "À postuler", applied: "Postulé", interview_1: "Entretien 1", interview_2: "Entretien 2+", offer: "Offre", rejected: "Refusé" },
     statuses: [["queued", "À postuler"], ["applied", "Postulé"], ["interview_1", "Entretien 1"], ["interview_2", "Entretien 2+"], ["offer", "Offre reçue"], ["rejected", "Refusé"], ["paused", "En pause"]],
+    aria: { city: "Filtrer par ville", type: "Filtrer par contrat", status: "Statut", close: "Fermer" },
   },
 }[LANG];
 
@@ -532,7 +534,7 @@ function renderFeed() {
         ${j.score_reason ? `<div class="creason">${esc(j.score_reason)}</div>` : ""}
       </div>
       <div class="score ${sc}" title="Score de pertinence">${j.relevance_score}</div>
-      <select class="status" aria-label="Statut" onchange="setStatus(${j.id}, this.value)">
+      <select class="status" aria-label="${T.aria.status}" onchange="setStatus(${j.id}, this.value)">
         ${STATUS_OPTIONS.map(([v, l]) => `<option value="${v}" ${statusMatches(j.status, v) ? "selected" : ""}>${l}</option>`).join("")}
       </select>
       ${actionCells}
@@ -636,8 +638,9 @@ function applyStaticI18n() {
   set("hero-board", T.heroBoard);
   set("hint", T.hint);
   set("fchip-all", T.fAll);
-  const city = document.getElementById("f-city"); if (city && city.options[0]) city.options[0].textContent = T.allCities;
-  const type = document.getElementById("f-type"); if (type && type.options[0]) type.options[0].textContent = T.allTypes;
+  const city = document.getElementById("f-city"); if (city) { city.setAttribute("aria-label", T.aria.city); if (city.options[0]) city.options[0].textContent = T.allCities; }
+  const type = document.getElementById("f-type"); if (type) { type.setAttribute("aria-label", T.aria.type); if (type.options[0]) type.options[0].textContent = T.allTypes; }
+  const gx = document.querySelector(".gen-banner-x"); if (gx) gx.setAttribute("aria-label", T.aria.close);
 }
 applyStaticI18n();
 
