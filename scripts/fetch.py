@@ -50,7 +50,7 @@ def main() -> int:
         db.init_db()
         age = _hours_since_newest()
         if age is not None and age < threshold:
-            print(f"Données fraîches ({age:.0f}h) — pas besoin de re-fetch.")
+            print(f"Data is still fresh ({age:.0f}h old), skipping fetch.")
             return 0
 
     keywords = cfg.get("expanded_keywords") or cfg.get("target_roles") or []
