@@ -19,7 +19,7 @@ coding agent you already use. No subscription. No API keys. Your CV never leaves
 The entire manual is two lines.
 
 ```bash
-git clone https://github.com/kamilassari/atlas.git && cd atlas
+git clone https://github.com/kamilassari-collab/atlas.git && cd atlas
 ```
 
 Open the folder in Claude Code (or Cursor) and type **`/atlas`**.

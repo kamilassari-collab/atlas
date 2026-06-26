@@ -9,7 +9,7 @@ import urllib.parse
 from pipeline.models import JobListing
 from pipeline.utils import normalize_contract_type
 
-_UA = {"User-Agent": "Atlas/1.0 (+https://github.com/kamilassari/atlas)"}
+_UA = {"User-Agent": "Atlas/1.0 (+https://github.com/kamilassari-collab/atlas)"}
 
 
 def _get_json(url: str, timeout: int = 15):
