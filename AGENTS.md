@@ -134,6 +134,11 @@ When you generate for a job (auto-prep or on request):
     "Responsible for" or "Helped with".
   - **Quantify.** Keep every real number the source gives you (€, %, headcount, time) and pull
     it to the front of the bullet. Numbers are what make it land.
+  - **Cover every distinct point; never drop a strong one.** Re-angle each substantive bullet
+    the source has. Never silently delete a quantified, high-impact line (e.g. a "3,000 clients,
+    10-25% discounts, churn reduction" bullet) to make room — dropping the best material while
+    keeping a weak one repeated is the worst possible outcome. Output as many distinct bullets
+    as the source supports, not fewer.
   - **Be honest when a role is thin.** If a role has no metrics or only vague bullets and you
     have nothing real to strengthen it with, TELL the user plainly — e.g. *"the Matera role has
     no numbers yet and reads generic; add a metric or two and it'll be much stronger"* — instead
